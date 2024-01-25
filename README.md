@@ -1,5 +1,6 @@
+# Criar o gráfico ggplot 
 ---
-Criar o gráfico ggplot com o Índice Gini como hovertext
+
 
 mun <- read_municipality(code_muni = "MG", year = 2010)
 
