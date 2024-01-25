@@ -1,14 +1,14 @@
 ---
 
 
-# Criar o gráfico ggplot com o Índice Gini como hovertext
+ Criar o gráfico ggplot com o Índice Gini como hovertext
 
 mun <- read_municipality(code_muni = "MG", year = 2010)
 
-# Converter coluna
+ Converter coluna
 gini_municipios$code_muni <- as.double(gini_municipios$code_muni)
 
-# Juntar coordenadas para criar o mapa
+ Juntar coordenadas para criar o mapa
 gini_municipios<- left_join(gini_municipios, mun , by = 'code_muni')
 
 ggplot_obj <- gini_municipios %>% 
@@ -29,9 +29,9 @@ ggplot_obj <- gini_municipios %>%
         style = north_arrow_fancy_orienteering) +
   theme(panel.grid = element_line(colour = "transparent"),panel.background =  element_blank(),axis.text = element_blank(),axis.ticks = element_blank())
 
-# Converter o gráfico ggplot para plotly com o hovertext
+ Converter o gráfico ggplot para plotly com o hovertext
 interactive_plot <- ggplotly(ggplot_obj, tooltip = "text")
 
-# Exibir o gráfico interativo
+ Exibir o gráfico interativo
 ggplot_obj
 ---
