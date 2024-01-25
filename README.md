@@ -1,4 +1,4 @@
-```markdown
+
 # Tutorial: Mapas Interativos no R
 
 Este tutorial fornece um guia passo a passo para criar mapas interativos no R utilizando as bibliotecas `ggplot2`, `sf`, `viridis`, e `plotly`. O exemplo apresentado utiliza dados sobre o Índice de Gini dos municípios de Minas Gerais em 2020, calculado com base no PIB per capita.
