@@ -1,4 +1,12 @@
 ---
+mun <- read_municipality(code_muni = "MG", year = 2010)
+
+# Converter coluna
+gini_municipios$code_muni <- as.double(gini_municipios$code_muni)
+
+# Juntar coordenadas para criar o mapa
+gini_municipios<- left_join(gini_municipios, mun , by = 'code_muni')
+
 # Criar o gráfico ggplot com o Índice Gini como hovertext
 ggplot_obj <- gini_municipios %>% 
   ggplot() +
